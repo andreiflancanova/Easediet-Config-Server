@@ -14,7 +14,7 @@ resilience4j:
       default:
         falhe-rate-threshold: 40
 server:
-  port: 8081
+  port: 8181
 
 eureka:
   client:
