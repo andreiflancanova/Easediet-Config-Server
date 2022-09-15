@@ -5,20 +5,11 @@ eureka:
     hostname: localhost
   client:
     registerWithEureka: true
-    fetchRegistry: true
+    fetchRegistry: false
     serviceUrl:
-      defaultZone: http://localhost:8762/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
 management:
   endpoints:
     web:
       exposure:
         include: health,info,mappings,refresh
-spring:
-  application:
-    name: eureka-server
-  config:
-    import:
-      - optional:configserver:http://localhost:8888/
-  cloud:
-    config:
-      profile: eureka-server  
