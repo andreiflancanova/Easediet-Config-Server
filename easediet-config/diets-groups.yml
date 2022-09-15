@@ -1,17 +1,13 @@
 server:
-  port: 8184
-
+  port: 8185
 eureka:
   client:
-    serviceUrl:
-      defaultZone: http://localhost:8762/eureka
     registerWithEureka: true
     fetchRegistry: true
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,mappings,refresh
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka/
+    server:
+      wait-time-in-ms-when-sync-empty: 3000   
 resilience4j:
   ratelimiter:
     instances:
@@ -27,19 +23,7 @@ resilience4j:
     instances:
       default:
         falhe-rate-threshold: 40
-    fetchRegistry: true
-health:
-  config:
-    enabled: false
 spring:
-  application:
-    name: diets-groups-service
-  config:
-    import:
-      - optional:configserver:http://localhost:8888/
-  cloud:
-    config:
-      profile: diets-groups   
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://database-1.co3n5hj6lnhk.sa-east-1.rds.amazonaws.com:5432/db_easediet
@@ -58,7 +42,8 @@ spring:
     time-zone: Brazil/East
     serialization:
       FAIL_ON_EMPTY_BEANS: false
-
-
-
-    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,mappings,refresh
