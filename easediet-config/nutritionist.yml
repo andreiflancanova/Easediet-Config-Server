@@ -1,6 +1,5 @@
 server:
   port: 8181
-
 eureka:
   client:
     registerWithEureka: true
@@ -29,9 +28,6 @@ management:
     web:
       exposure:
         include: health,info,mappings,refresh
-health:
-  config:
-    enabled: false    
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://database-1.co3n5hj6lnhk.sa-east-1.rds.amazonaws.com:5432/db_easediet
@@ -50,4 +46,3 @@ health:
     time-zone: Brazil/East
     serialization:
       FAIL_ON_EMPTY_BEANS: false
-spring.config.import: "optional:configserver:http://localhost:8888"
