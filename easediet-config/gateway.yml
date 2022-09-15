@@ -25,7 +25,7 @@ spring:
       - optional:configserver:http://localhost:8888/    
   cloud:
     config:
-      profile: application-gateway
+      profile: gateway
     gateway:    
       discovery:
         locator:
