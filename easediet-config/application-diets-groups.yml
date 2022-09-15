@@ -28,7 +28,9 @@ resilience4j:
       default:
         falhe-rate-threshold: 40
     fetchRegistry: true
-
+health:
+  config:
+    enabled: false
 spring:
   application:
     name: diets-groups-service

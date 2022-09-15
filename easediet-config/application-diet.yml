@@ -32,6 +32,9 @@ management:
     web:
       exposure:
         include: health, info, mappings
+health:
+  config:
+    enabled: false
 spring:
   application:
     name: diet-service
