@@ -1,5 +1,5 @@
 server:
-  port: 8083
+  port: 8183
 
 eureka:
   client:
@@ -22,16 +22,21 @@ resilience4j:
   circuit-breaker:
     instances:
       default:
-        falhe-rate-threshold: 40
-    fetchRegistry: true
+        failure-rate-threshold: 40
 management:
   endpoints:
     web:
       exposure:
-        include: health,info,mappings
+        include: health, info, mappings
 spring:
   application:
     name: diet-service
+  config:
+    import:
+      - optional:configserver:http://localhost:8888/
+  cloud:
+    config:
+      profile: application-diet   
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://database-1.co3n5hj6lnhk.sa-east-1.rds.amazonaws.com:5432/db_easediet
