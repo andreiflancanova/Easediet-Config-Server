@@ -23,11 +23,7 @@ resilience4j:
     instances:
       default:
         falhe-rate-threshold: 40
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,mappings,refresh
+spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://database-1.co3n5hj6lnhk.sa-east-1.rds.amazonaws.com:5432/db_easediet
@@ -46,3 +42,8 @@ management:
     time-zone: Brazil/East
     serialization:
       FAIL_ON_EMPTY_BEANS: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,mappings,refresh
