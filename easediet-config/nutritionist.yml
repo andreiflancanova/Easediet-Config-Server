@@ -48,7 +48,7 @@ management:
       FAIL_ON_EMPTY_BEANS: false
 spring:
   config:
-    import: "optional:configserver:http://localhost:8888/"
+    import: optional:configserver:http://localhost:8888/
   cloud:
     config:
       profile: dev
