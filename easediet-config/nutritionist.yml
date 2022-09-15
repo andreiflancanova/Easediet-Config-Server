@@ -50,4 +50,6 @@ health:
     time-zone: Brazil/East
     serialization:
       FAIL_ON_EMPTY_BEANS: false
-spring.config.import: "optional:configserver:http://localhost:8888"
+spring:
+  config:
+    import: "optional:configserver:http://localhost:8888/"
