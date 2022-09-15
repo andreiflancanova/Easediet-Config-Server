@@ -32,12 +32,6 @@ management:
 health:
   config:
     enabled: false    
-spring:
-  application:
-    name: nutritionist-service
-  config:
-    import:
-      - optional:configserver:http://localhost:8888/
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://database-1.co3n5hj6lnhk.sa-east-1.rds.amazonaws.com:5432/db_easediet
@@ -56,3 +50,4 @@ spring:
     time-zone: Brazil/East
     serialization:
       FAIL_ON_EMPTY_BEANS: false
+spring.config.import=configserver:http://localhost:8888
