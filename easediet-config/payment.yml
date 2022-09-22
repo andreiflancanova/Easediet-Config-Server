@@ -1,11 +1,15 @@
 server:
   port: 8185
 eureka:
+  instance:
+    hostname: localhost
+    port: 8762
+    preferIpAddress: true
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://localhost:8762/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
     server:
       wait-time-in-ms-when-sync-empty: 3000   
 resilience4j:
