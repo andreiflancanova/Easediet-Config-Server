@@ -22,31 +22,31 @@ spring:
           enabled: true
       routes:
         - id: diet-service
-          uri: lb://DIET-SERVICE
+          uri: lb://DIET
           predicates:
             - Path=/diets/**
         - id: diet-service
-          uri: lb://DIET-SERVICE
+          uri: lb://DIET
           predicates:
             - Path=/translate/**
         - id: diets-groups-service
-          uri: lb://DIETS-GROUPS-SERVICE
+          uri: lb://DIETS-GROUPS
           predicates:
             - Path=/diets-groups/**
         - id: nutritionist-service
-          uri: lb://NUTRITIONIST-SERVICE
+          uri: lb://NUTRITIONIST
           predicates:
             - Path=/nutritionist/**
         - id: patient-service
-          uri: lb://PATIENT-SERVICE
+          uri: lb://PATIENT
           predicates:
             - Path=/patient/**
         - id: payment-service
-          uri: lb://PAYMENT-SERVICE
+          uri: lb://PAYMENT
           predicates:
             - Path=/payment/**
         - id: auth-service
-          uri: lb://AUTH-SERVICE
+          uri: lb://AUTH
           predicates:
             - Path=/auth/**    
 management:
