@@ -53,4 +53,4 @@ management:
         include: health,info,mappings,refresh
 springdoc:
   api-docs:
-    path: payment/v3/api-docs/
+    path: payment-service/v3/api-docs/

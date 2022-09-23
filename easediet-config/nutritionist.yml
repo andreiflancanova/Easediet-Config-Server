@@ -53,4 +53,4 @@ management:
         include: health,info,mappings,refresh
 springdoc:
   api-docs:
-    path: nutritionist/v3/api-docs
+    path: nutritionist-service/v3/api-docs

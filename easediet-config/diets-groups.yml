@@ -53,4 +53,4 @@ management:
         include: health,info,mappings,refresh
 springdoc:
   api-docs:
-    path: diets-groups/v3/api-docs
+    path: diets-groups-service/v3/api-docs
