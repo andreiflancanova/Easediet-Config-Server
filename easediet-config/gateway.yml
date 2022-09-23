@@ -45,10 +45,12 @@ spring:
           uri: lb://PAYMENT
           predicates:
             - Path=/payment/**
-        - id: auth-service
-          uri: lb://AUTH
+        - id: openapi
+          uri: lb://GATEWAY
           predicates:
-            - Path=/auth/**    
+            - Path=/v3/api-docs
+          filters:
+            - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
 management:
   endpoints:
     web:
@@ -58,3 +60,6 @@ jwt:
   secret: secretkey
   token:
     validity: 180000
+spring-docs:
+  api-docs:
+    path: patient/v3/api-docs
