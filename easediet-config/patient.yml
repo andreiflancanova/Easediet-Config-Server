@@ -57,4 +57,4 @@ jwt:
     validity: 1800000
 springdoc:
   api-docs:
-    path: patient/v3/api-docs
+    path: patient-service/v3/api-docs
