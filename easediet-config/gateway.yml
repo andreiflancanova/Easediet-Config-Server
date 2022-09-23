@@ -24,31 +24,23 @@ spring:
         - id: diet-service
           uri: lb://DIET-SERVICE
           predicates:
-            - Path=/diets/**
-        - id: diet-service
-          uri: lb://DIET-SERVICE
-          predicates:
             - Path=/diet-service/**
-        - id: diet-service
-          uri: lb://DIET-SERVICE
-          predicates:
-            - Path=/translate/**
         - id: diets-groups-service
-          uri: lb://DIETS-SERVICE
+          uri: lb://DIETS-GROUPS-SERVICE
           predicates:
-            - Path=/diets-groups/**
+            - Path=/diets-groups-service/**
         - id: nutritionist-service
           uri: lb://NUTRITIONIST-SERVICE
           predicates:
-            - Path=/nutritionist/**
+            - Path=/nutritionist-service/**
         - id: patient-service
           uri: lb://PATIENT-SERVICE
           predicates:
-            - Path=/patient/**
+            - Path=/patient-service/**
         - id: payment-service
           uri: lb://PAYMENT-SERVICE
           predicates:
-            - Path=/payment/**
+            - Path=/payment-service/**
         - id: openapi
           uri: lb://GATEWAY
           predicates:
