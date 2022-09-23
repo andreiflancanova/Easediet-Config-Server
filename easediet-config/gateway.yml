@@ -25,7 +25,7 @@ spring:
           uri: lb://DIET
           predicates:
             - Path=/diets/**
-        - id: diet-service
+        - id: diets-service
           uri: lb://DIET
           predicates:
             - Path=/translate/**
@@ -48,7 +48,7 @@ spring:
         - id: openapi
           uri: lb://GATEWAY
           predicates:
-            - Path=/v3/api-docs
+            - Path=/v3/api-docs/**
           filters:
             - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
 management:
