@@ -60,6 +60,3 @@ jwt:
   secret: secretkey
   token:
     validity: 180000
-spring-docs:
-  api-docs:
-    path: patient/v3/api-docs
