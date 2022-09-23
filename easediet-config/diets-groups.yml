@@ -51,6 +51,6 @@ management:
     web:
       exposure:
         include: health,info,mappings,refresh
-spring-docs:
+springdoc:
   api-docs:
     path: diets-groups/v3/api-docs
